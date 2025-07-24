@@ -22,7 +22,7 @@ def main():
 
     clients = get_client_list()
     if not clients:
-        print("No CLIENTS found in .env. Please set CLIENTS=FLAGSTONE,SCHREIBER,...")
+        print("No CLIENTS found in .env. Please set CLIENTS=Client1,...")
         return
 
     for client in clients:
