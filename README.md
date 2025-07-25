@@ -1,7 +1,7 @@
 # Instacart API Token Refresh Utility
 
 <p align="center">
-  <img src="mazava_blk.png" alt="Mazava Consulting" width="400"/>
+  <img src="assets/images/mazava_blk.png" alt="Mazava Consulting" width="400"/>
 </p>
 
 <p align="center">
@@ -11,7 +11,7 @@
 
 ---
 
-## 🎯 Overview
+## Overview
 
 The **Instacart Token Refresh Utility** is a production-grade script designed to simplify OAuth token management for the Instacart Ads API. This tool automates the process of converting authorization codes to refresh tokens, enabling seamless integration with any analytics platform, data warehouse, or custom application.
 
@@ -21,17 +21,17 @@ Managing OAuth tokens for the Instacart Ads API can be complex, especially when 
 
 ### Key Features
 
-- ✅ **Multi-Client Support** - Handle multiple Instacart client accounts simultaneously
-- ✅ **Environment Variable Configuration** - Secure credential management via `.env` files
-- ✅ **Automated Token Exchange** - Convert authorization codes to refresh tokens seamlessly
-- ✅ **Dual Output Format** - Save tokens in both JSON (complete response) and TXT (token only) formats
-- ✅ **Interactive Mode** - Prompts for missing credentials when not found in environment
-- ✅ **Error Handling** - Comprehensive error reporting and validation
-- ✅ **Platform Agnostic** - Use with any analytics platform or data integration tool
+- **Multi-Client Support** - Handle multiple Instacart client accounts simultaneously
+- **Environment Variable Configuration** - Secure credential management via `.env` files
+- **Automated Token Exchange** - Convert authorization codes to refresh tokens seamlessly
+- **Dual Output Format** - Save tokens in both JSON (complete response) and TXT (token only) formats
+- **Interactive Mode** - Prompts for missing credentials when not found in environment
+- **Error Handling** - Comprehensive error reporting and validation
+- **Platform Agnostic** - Use with any analytics platform or data integration tool
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -60,7 +60,7 @@ python instacart_refresh_token.py
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 ### Environment Variables
 
@@ -113,7 +113,7 @@ BRANDY_AUTH_CODE=your_authorization_code
 
 ---
 
-## 📋 Usage Examples
+## Usage Examples
 
 ### Example 1: Full Environment Configuration
 
@@ -167,7 +167,7 @@ MYCLIENT_AUTH_CODE=your_auth_code
 
 ---
 
-## 📁 Output Files
+## Output Files
 
 The script generates timestamped files for each client:
 
@@ -199,7 +199,7 @@ nc42QIfvTNXhwcwZoU-FMO2PaTeriUJ_pGFHhjuQLv0
 
 ---
 
-## 🔗 Integration Examples
+## Integration Examples
 
 ### Using Tokens with Popular Analytics Platforms
 
@@ -359,7 +359,7 @@ etl.load_data(transformed, "postgresql://user:pass@host:port/db")
 
 ---
 
-## 🔐 Security Best Practices
+## Security Best Practices
 
 ### Environment Variable Security
 ```bash
@@ -371,11 +371,11 @@ chmod 600 .env
 ```
 
 ### Token Storage
-- ✅ Store refresh tokens securely
-- ✅ Use different tokens for development/production
-- ✅ Rotate tokens regularly
-- ❌ Never commit tokens to version control
-- ❌ Never share tokens in plain text communications
+- Store refresh tokens securely
+- Use different tokens for development/production
+- Rotate tokens regularly
+- Never commit tokens to version control
+- Never share tokens in plain text communications
 
 ### Production Recommendations
 - Use secret management systems (AWS Secrets Manager, Azure Key Vault, HashiCorp Vault)
@@ -386,7 +386,7 @@ chmod 600 .env
 
 ---
 
-## 🛠️ Advanced Configuration
+## Advanced Configuration
 
 ### Custom Client Names
 
@@ -455,7 +455,7 @@ python instacart_refresh_token.py
 
 ---
 
-## 🔍 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -494,7 +494,7 @@ The script includes automatic delays between requests to respect Instacart's rat
 
 ---
 
-## 📚 Integration Patterns
+## Integration Patterns
 
 ### Pattern 1: Scheduled Data Pipeline
 
@@ -518,10 +518,10 @@ def run_daily_sync():
             etl = InstacartETL(refresh_token, client_config[client])
             etl.run_pipeline()
             
-            print(f"✅ Completed sync for {client}")
+            print(f"Completed sync for {client}")
             
         except Exception as e:
-            print(f"❌ Failed sync for {client}: {e}")
+            print(f"Failed sync for {client}: {e}")
             # Send alert/notification
 
 # Schedule daily at 2 AM
@@ -612,9 +612,9 @@ class MultiPlatformSync:
             json=transformed_data
         ) as response:
             if response.status == 200:
-                print(f"✅ Synced to {platform.name}")
+                print(f"Synced to {platform.name}")
             else:
-                print(f"❌ Failed to sync to {platform.name}")
+                print(f"Failed to sync to {platform.name}")
     
     async def sync_all_platforms(self, instacart_data):
         """Sync to all platforms concurrently"""
@@ -632,7 +632,7 @@ await sync_manager.sync_all_platforms(your_instacart_data)
 
 ---
 
-## 🎯 Production Deployment
+## Production Deployment
 
 ### Docker Support
 
@@ -743,7 +743,7 @@ def lambda_handler(event, context):
 
 ---
 
-## 🌟 Use Cases
+## Use Cases
 
 ### Marketing Agencies
 - **Multi-Client Management:** Handle dozens of client accounts efficiently
@@ -771,7 +771,7 @@ def lambda_handler(event, context):
 
 ---
 
-## 📞 Support & Community
+## Support & Community
 
 ### Documentation
 - [Instacart Ads API Documentation](https://docs.ads.instacart.com/)
@@ -790,7 +790,7 @@ This tool is open source and community-driven. Contributions welcome!
 - **Company:** Mazava Consulting  
 - **Tagline:** #AnalyzeResponsibly
 
-*Professional data solutions that actually work.*
+*Data solutions that actually work.*
 
 ### Contributing
 1. Fork the repository
@@ -810,7 +810,7 @@ This tool is open source and community-driven. Contributions welcome!
 
 ---
 
-## 📄 License
+## License
 
 MIT License - see [LICENSE](LICENSE) file for details.
 
@@ -818,17 +818,8 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🙏 Acknowledgments
-
-- **Instacart** for providing a robust Ads API
-- **Data Community** for driving the need for better integration tools
-- **Analytics Platform Vendors** for supporting custom integrations
-- **Contributors** who help improve this tool
-
----
-
 <p align="center">
-  <sub>Built with ❤️ by <a href="https://mazavaltd.com">Mazava Consulting</a> for the data community</sub><br>
+  <sub>Built For Impact by <a href="https://mazavaltd.com">Mazava Consulting</a> for the data community</sub><br>
   <sub>For support, try turning it off and on again, or email us for actual help.</sub><br>
   <sub><strong>#AnalyzeResponsibly</strong></sub>
 </p>
