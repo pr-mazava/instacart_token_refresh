@@ -43,7 +43,7 @@ pip install requests python-dotenv
 
 1. **Clone and Setup**
 ```bash
-git clone <repository-url>
+gh repo clone pr-mazava/instacart_token_refresh
 cd instacart-token-refresh
 ```
 
